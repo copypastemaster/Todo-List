@@ -1,0 +1,48 @@
+:root {
+  --primary: rgb(174, 212, 124);
+  --heading: blue;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  height: 100vh;
+  gap: 5rem;
+}
+
+#todo {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 10;
+  background-color: var(--primary);
+  border-radius: 13px;
+  padding: 0.6rem;
+}
+
+#urgent {
+  grid-column-start: 6;
+  grid-column-end: 10;
+  grid-row-start: -9;
+  grid-row-end: -7;
+  background-color: var(--primary);
+  border-radius: 13px;
+  padding: 0.6rem;
+}
+
+
+#todoHeader, #urgentHeader {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.6rem;
+}
+
+/* Items */
+
+#todo p, #urgent p {
+  margin: 0 auto; 
+  font-size: 1.2rem;
+}
+
+

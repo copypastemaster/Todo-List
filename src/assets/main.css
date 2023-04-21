@@ -129,13 +129,76 @@ input [type=text] {
   height: 30px;
   background-color: rgb(110, 160, 201);
   border-radius: 25px;
+  position: relative;
+  left: 10rem;
 }
 
 #projectTitle {
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   border-radius: 25px;
   border: none;
   padding: 1rem;
+  position: relative;
+  left: 10rem;
+}
+
+#titleId {
+  display: flex;
+  gap: 1rem;
+}
+
+/* todos */
+#headerContainer {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid;
+}
+
+#todoAdd {
+  position: relative;
+  top: 18px;
+  height: 30px;
+  width: 30px;
+}
+
+#todoProject {
+  padding: 0.1rem;
+  /* border: 1px solid; */
+  display: flex;
+  gap: 1rem;
+  visibility: hidden;
+  position: absolute;
+  left: 89.2rem;
+  top: 15.9rem;
+  background-color: rgb(207, 212, 157);
+  width: 707px;
+  height: 8em;
+}
+
+#todoBack {
+  font-size: 1.3em;
+  width: 2rem;
+  border: none;
+  background-color: rgb(207, 212, 157);
+}
+
+#todoSubmit {
+  width: 5rem;
+  border: none;
+  height: 30px;
+  background-color: rgb(110, 160, 201);
+  border-radius: 25px;
+  position: relative;
+  left: 10rem;
+}
+
+#todoTitle {
+  font-size: 0.8rem;
+  border-radius: 25px;
+  border: none;
+  padding: 1rem;
+  position: relative;
+  left: 10rem;
 }
 
 #titleId {

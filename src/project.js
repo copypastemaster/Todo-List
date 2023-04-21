@@ -10,6 +10,7 @@ const projectBack = document.getElementById('projectBack');
 const ul = document.getElementById('ulCont');
 const header = document.getElementById('heading');
 const backBtn = document.getElementById('backBtn');
+const addBtn = document.getElementById('addBtn');
 
 //project
 
@@ -20,8 +21,6 @@ const getDetails = (e) => {
   todoItem.title_s = projectTitle.value;
   const li = document.createElement('li');
   const label = document.createElement('label');
-  const input = document.createElement('input');
-  input.type = 'checkbox';
   const span = document.createElement('span');
   span.classList.add('todo-text');
 
@@ -34,13 +33,13 @@ const getDetails = (e) => {
   projectTitle.value = '';
 
   span.addEventListener('click', () => {
+    const todos = document.getElementById('todos');
     todoHeader.innerHTML = `Todos of ${todoItem.title_s}`;
   });
-  return ul, span;
+  return ul;
 };
 
 //Project listenerse
-const addBtn = document.getElementById('addBtn');
 
 addBtn.addEventListener('click', () => {
   project.style = 'visibility: visible;';

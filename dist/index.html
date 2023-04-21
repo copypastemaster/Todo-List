@@ -72,12 +72,33 @@
 
 
       <div id="todos">
-        <h2 id="todoHeader">Todos</h2>
-        <ul>
-          <li>
+
+        <div id="headerContainer">
+          <h2 id="todoHeader">Todos</h2>
+          <input type="button"
+                 value="+"
+                 id="todoAdd">
+        </div>
+        
+        <ul id="todoUL">
+          <form id="todoProject">
+
+            <input type="button"
+                   value="x"
+                   id="todoBack">
+
+            <label id="titleId">
+              <input type="text"
+                     placeholder="Title"
+                     id="todoTitle"
+                     name="project">
+
+              <input type="submit"
+                     value="submit"
+                     id="todoSubmit">      
+            </label>
             
-           
-          </li>
+          </form>
         </ul>
       </div>
   </div>

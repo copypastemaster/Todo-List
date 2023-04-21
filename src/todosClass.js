@@ -4,10 +4,8 @@ export default class TodoProjects {
   }
 }
 
-export class TodoItems {
-  constructor(todo, dueDate, remove) {
-    this.todo = todo;
-    this.dueDate = dueDate;
-    this.remove = remove;
+export class TodoItems extends TodoProjects {
+  constructor(title_s) {
+    super(title_s);
   }
 }

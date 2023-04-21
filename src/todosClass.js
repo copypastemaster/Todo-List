@@ -4,7 +4,7 @@ export default class TodoProjects {
   }
 }
 
-class TodoItems {
+export class TodoItems {
   constructor(todo, dueDate, remove) {
     this.todo = todo;
     this.dueDate = dueDate;

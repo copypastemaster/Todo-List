@@ -22,13 +22,31 @@
                  id="backBtn"
                  style="position: relative;
                        left: 2rem;"> -->
-          <h2 id="heading">Todo Projects</h2>
+          <h2 id="heading">Projects</h2>
           <input type="button"
                  value="+"
                  id="addBtn">
         </div>
         
         <ul id="ulCont">
+          <form id="project">
+
+            <input type="button"
+                   value="x"
+                   id="projectBack">
+
+            <label id="titleId">
+              <input type="text"
+                     placeholder="Title"
+                     id="projectTitle"
+                     name="project">
+
+              <input type="submit"
+                     value="submit"
+                     id="projectSubmit">      
+            </label>
+            
+          </form>
           <!-- <li>
             <label>
               <input type="checkbox" name="todo1">
@@ -48,86 +66,13 @@
             </label>
           </li> -->
           
-          <dialog id="modalTodo">
-            <form id="formCont">
-              <label for="back">
-              <input type="button" 
-                     value="x"                     
-                     name="back"
-                     id="back">
-               </label>
-              
-              <label for="todo">
-                <input type="text"
-                       placeholder="task..."
-                       id="todo"
-                       name="todo">
-              </label>
-
-              <!-- due date -->
-
-              <label for="submit">
-                <input type="submit"
-                       value="submit"
-                       id="submit"
-                       name="submit">
-              </label>
-            </form>
-            </dialog>
+          
         </ul>
-
-        <ul>
-          <!-- <dialog id="modalProject">
-            <form id="projectCont">
-              <label for="projectBack">
-                <input type="button"
-                       value="x"
-                       name="projectBack"
-                       id="projectBack">
-              </label>
-
-              <label for="projectTitle">
-                <input type="text"
-                       placeholder="Title..."
-                       id="projectTitle"
-                       name="projectTitle">
-              </label>
-
-              <label for="projectSubmit">
-                <input type="submit"
-                       value="submit"
-                       id="projectSubmit"
-                       name="projectSubmit">
-              </label>
-            </form>
-          </dialog> -->
-
-          <form id="project">
-            <input type="button"
-                   value="x"
-                   id="projectBack">
-
-            <label id="titleId">
-              <input type="text"
-                     placeholder="Title"
-                     id="projectTitle"
-                     name="project">
-                     
-              <input type="submit"
-                     value="submit"
-                     id="projectSubmit">      
-            </label>
-
-            
-          </form>
-        </ul>
-
-        
       </div>
 
 
-      <div class="urgent">
-        <h2>Urgents</h2>
+      <div id="todos">
+        <h2 id="todoHeader">Todos</h2>
         <ul>
           <li>
             

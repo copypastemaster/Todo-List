@@ -18,9 +18,9 @@ projectBack.addEventListener('click', () => {
 projectSubmit.addEventListener('click', (e) => {
   e.preventDefault();
   const me = addProj(projectTitle.value);
+  me.editList();
   me.addToList();
   me.removeFromList();
-  me.editList();
   modal.close();
 });
 

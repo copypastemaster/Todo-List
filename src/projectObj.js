@@ -38,16 +38,17 @@ const addProj = (title) => {
 
     editList() {
       editButton.addEventListener('click', () => {
-        editTitle.value = title;
-        editModal.showModal();
-        editRemove.addEventListener('click', () => {
-          editModal.close();
-        });
-        editSubmit.addEventListener('click', () => {
-          span.innerHTML = `${editTitle.value}`;
-          editModal.close();
-        });
+        // editTitle.value = title;
+        // editModal.showModal();
+        // editRemove.addEventListener('click', () => {
+        //   editModal.close();
+        span.innerHTML = 'Hey';
       });
+      // editSubmit.addEventListener('click', () => {
+      //   span.innerHTML = `${editTitle.value}`;
+      //   editModal.close();
+      // });
+      // });
     },
   };
 };

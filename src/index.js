@@ -20,5 +20,8 @@ projectSubmit.addEventListener('click', (e) => {
   const me = addProj(projectTitle.value);
   me.addToList();
   me.removeFromList();
+  me.editList();
   modal.close();
 });
+
+export { modal, projectSubmit };

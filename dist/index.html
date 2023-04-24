@@ -37,10 +37,27 @@
                id="remove">
         <input type="title"
                placeholder="Title..."
-               id="title">
+               id="title"
+               maxlength="40">
         <input type="submit"
                value="submit"
                id="submit">       
+      </form>
+    </dialog>
+
+    <dialog id="editModal">
+      <h2>Edit title</h2>
+      <form method="dialog">
+        <input type="button"
+               value="x"
+               id="editRemove">
+        <input type="title"
+               placeholder="Title..."
+               id="editTitle"
+               maxlength="40">
+        <input type="submit"
+               value="submit"
+               id="editSubmit">       
       </form>
     </dialog>
   </body>

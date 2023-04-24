@@ -5,102 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo list</title>
-    <!-- <link rel="stylesheet" href="../src/assets/main.css"> -->
+    <link rel="stylesheet" href="../src/assets/main.css">
   </head>
   <body>
     <script src="bundle.js" type="module" defer></script>
 
-    
+    <div class="project-list">
 
-    <div id="container">
+      <div id="projectHeader">
+        <h2>Projects</h2>     
+        <input type="button"
+               value="+"
+               id="projectAddBtn">
 
-      <div class="todo-list">
-
-        <div class="header">
-          <!-- <input type="button"
-                 value="<"
-                 id="backBtn"
-                 style="position: relative;
-                       left: 2rem;"> -->
-          <h2 id="heading">Projects</h2>
-          <input type="button"
-                 value="+"
-                 id="addBtn">
-        </div>
-        
-        <ul id="ulCont">
-          <form id="project">
-
-            <input type="button"
-                   value="x"
-                   id="projectBack">
-
-            <label id="titleId">
-              <input type="text"
-                     placeholder="Title"
-                     id="projectTitle"
-                     name="project">
-
-              <input type="submit"
-                     value="submit"
-                     id="projectSubmit">      
-            </label>
-            
-          </form>
-          <!-- <li>
-            <label>
-              <input type="checkbox" name="todo1">
-              <span class="todo-text">Do laundry</span>
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" name="todo2">
-              <span class="todo-text">Buy groceries</span>
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" name="todo3">
-              <span class="todo-text">Clean the kitchen</span>
-            </label>
-          </li> -->
-          
-          
-        </ul>
       </div>
 
-
-      <div id="todos">
-
-        <div id="headerContainer">
-          <h2 id="todoHeader">Todos</h2>
-          <input type="button"
-                 value="+"
-                 id="todoAdd">
+        <div id="projects">
         </div>
-        
-        <ul id="todoUL">
-          <form id="todoProject">
-
-            <input type="button"
-                   value="x"
-                   id="todoBack">
-
-            <label id="titleId">
-              <input type="text"
-                     placeholder="Title"
-                     id="todoTitle"
-                     name="project">
-
-              <input type="submit"
-                     value="submit"
-                     id="todoSubmit">      
-            </label>
-            
-          </form>
-        </ul>
+      
       </div>
-  </div>
+
+    <div id="show-todo">
+      <h2>Todos</h2>
+    </div>
+
+    <dialog id="modal">
+      <h2>Project title:</h2>
+      <form method="dialog">
+        <input type="button"
+               value="x"
+               id="remove">
+        <input type="title"
+               placeholder="Title..."
+               id="title">
+        <input type="submit"
+               value="submit"
+               id="submit">       
+      </form>
+    </dialog>
   </body>
 </html>
+
+
+ <!-- <ul>
+        <li>
+          <label>
+            <input type="checkbox" name="todo1">
+            <span class="todo-text">Do laundry</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="todo2">
+            <span class="todo-text">Buy groceries</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="todo3">
+            <span class="todo-text">Clean the kitchen</span>
+          </label>
+        </li>
+      </ul> -->

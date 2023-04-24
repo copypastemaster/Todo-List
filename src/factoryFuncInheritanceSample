@@ -1,0 +1,14 @@
+const Person = (name) => {
+  const sayName = () => console.log(`Hi i am ${name}`);
+
+  return { sayName };
+};
+
+const Nerd = (name) => {
+  const { sayName } = Person(name);
+  const doSome = () => {
+    console.log('Nerd stuff');
+  };
+
+  return { sayName, doSome };
+};

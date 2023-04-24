@@ -1,16 +1,24 @@
 import './assets/main.css';
-import { add, addDays } from 'date-fns';
-import TodoProjects from './todosClass';
-import { addBtn, projectBack, projectSubmit, getDetails } from './project';
-import { span } from './todos';
+import addProj from './projectObj';
 
-const date = new Date();
-const tomorrow = addDays(date, 2);
+//selectors
+const projectAddBtn = document.getElementById('projectAddBtn');
+const projectSubmit = document.getElementById('submit');
+const projectTitle = document.getElementById('title');
+const projectBack = document.getElementById('remove');
+const modal = document.getElementById('modal');
 
-//Project selectors
+projectAddBtn.addEventListener('click', () => {
+  modal.showModal();
+});
+projectBack.addEventListener('click', () => {
+  modal.close();
+});
 
-//Todos selectors
-const todo = document.getElementById('todo');
-const modalTodo = document.getElementById('modalTodo');
-const submitBtn = document.getElementById('submit');
-const back = document.getElementById('back');
+projectSubmit.addEventListener('click', (e) => {
+  e.preventDefault();
+  const me = addProj(projectTitle.value);
+  me.addToList();
+  me.removeFromList();
+  modal.close();
+});

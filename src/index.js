@@ -21,6 +21,7 @@ projectSubmit.addEventListener('click', (e) => {
   me.editList();
   me.addToList();
   me.removeFromList();
+  me.viewList();
   modal.close();
 });
 

@@ -23,10 +23,20 @@
         <div id="projects">
         </div>
       
-      </div>
+    </div>
 
-    <div id="show-todo">
-      <h2>Todos</h2>
+    <div hidden id="show-todo">
+      <input type="button"
+             value="<"
+             id="back">
+
+      <div id="todoHeader">
+        <h2 id="todoHeading"></h2>
+        <input type="button"
+               value="+"
+               id="todoAdd">
+      </div>
+      
     </div>
 
     <dialog id="modal">
@@ -45,21 +55,6 @@
       </form>
     </dialog>
 
-    <dialog id="editModal">
-      <h2>Edit title</h2>
-      <form method="dialog" id ='editDialog'>
-        <input type="button"
-               value="x"
-               id="editRemove">
-        <input type="title"
-               placeholder="Title..."
-               id="editTitle"
-               maxlength="40">
-        <input type="submit"
-               value="submit"
-               id="editSubmit">       
-      </form>
-    </dialog>
   </body>
 </html>
 

@@ -1,1 +1,1 @@
-class Todo {}
+const addTodo = (title) => {};

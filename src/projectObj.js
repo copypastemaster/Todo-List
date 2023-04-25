@@ -35,11 +35,9 @@ const addProj = (title) => {
       const saveButton = document.createElement('input');
       saveButton.type = 'button';
       saveButton.value = 'save';
-      let str;
 
       editButton.addEventListener('click', () => {
         span.contentEditable = true;
-        str = span;
         span.focus();
         editButton.replaceWith(saveButton);
       });
@@ -47,6 +45,24 @@ const addProj = (title) => {
       saveButton.addEventListener('click', () => {
         saveButton.replaceWith(editButton);
         span.contentEditable = false;
+        console.log(span);
+      });
+    },
+
+    viewList() {
+      const getProject = document.querySelector('.project-list');
+      const getTodo = document.getElementById('show-todo');
+      const back = document.getElementById('back');
+      const header = document.getElementById('todoHeading');
+
+      span.addEventListener('click', () => {
+        getProject.replaceWith(getTodo);
+        getTodo.hidden = false;
+        header.innerHTML = `Todos of ${span.textContent}`;
+      });
+
+      back.addEventListener('click', () => {
+        getTodo.replaceWith(getProject);
       });
     },
   };

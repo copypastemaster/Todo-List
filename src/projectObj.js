@@ -1,10 +1,5 @@
 import { modal, projectSubmit } from './index';
 
-const editModal = document.getElementById('editModal');
-const editRemove = document.getElementById('editRemove');
-const editTitle = document.getElementById('editTitle');
-const editSubmit = document.getElementById('editSubmit');
-
 const addProj = (title) => {
   const container = document.querySelector('#projects');
   const ul = document.createElement('ul');
@@ -37,18 +32,22 @@ const addProj = (title) => {
     },
 
     editList() {
+      const saveButton = document.createElement('input');
+      saveButton.type = 'button';
+      saveButton.value = 'save';
+      let str;
+
       editButton.addEventListener('click', () => {
-        // editTitle.value = title;
-        // editModal.showModal();
-        // editRemove.addEventListener('click', () => {
-        //   editModal.close();
-        span.innerHTML = 'Hey';
+        span.contentEditable = true;
+        str = span;
+        span.focus();
+        editButton.replaceWith(saveButton);
       });
-      // editSubmit.addEventListener('click', () => {
-      //   span.innerHTML = `${editTitle.value}`;
-      //   editModal.close();
-      // });
-      // });
+
+      saveButton.addEventListener('click', () => {
+        saveButton.replaceWith(editButton);
+        span.contentEditable = false;
+      });
     },
   };
 };

@@ -1,4 +1,4 @@
-import { modal, projectSubmit } from './index';
+import addTodo from './todoObject';
 
 const addProj = (title) => {
   const container = document.querySelector('#projects');
@@ -55,10 +55,30 @@ const addProj = (title) => {
       const back = document.getElementById('back');
       const header = document.getElementById('todoHeading');
 
+      //todo selectors
+      const todoAddBtn = document.getElementById('todoAdd');
+      const todoSubmit = document.getElementById('todoSubmit');
+      const todoTitle = document.getElementById('todoTitle');
+      const todoBack = document.getElementById('todoRemove');
+      const todoModal = document.getElementById('todoModal');
+
       span.addEventListener('click', () => {
         getProject.replaceWith(getTodo);
         getTodo.hidden = false;
         header.innerHTML = `Todos of ${span.textContent}`;
+
+        todoAddBtn.addEventListener('click', () => {
+          todoModal.show();
+        });
+
+        todoSubmit.addEventListener('click', (e) => {
+          e.preventDefault();
+
+          const todo = addTodo(todoTitle.value);
+          todo.addToList();
+          todo.removeFromList();
+          todoModal.close();
+        });
       });
 
       back.addEventListener('click', () => {

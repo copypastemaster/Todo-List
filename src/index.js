@@ -1,7 +1,10 @@
 import './assets/main.css';
 import addProj from './projectObj';
+import addTodo from './todoObject';
 
-//selectors
+// console.log(tomorrow);
+
+//project selectors
 const projectAddBtn = document.getElementById('projectAddBtn');
 const projectSubmit = document.getElementById('submit');
 const projectTitle = document.getElementById('title');

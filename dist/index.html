@@ -36,6 +36,10 @@
                value="+"
                id="todoAdd">
       </div>
+
+      <div id="todoList">
+
+      </div>
       
     </div>
 
@@ -48,10 +52,26 @@
         <input type="title"
                placeholder="Title..."
                id="title"
-               maxlength="40">
+               maxlength="25">
         <input type="submit"
                value="submit"
                id="submit">       
+      </form>
+    </dialog>
+
+    <dialog id="todoModal">
+      <h2>Todo</h2>
+      <form method="dialog">
+        <input type="button"
+               value="x"
+               id="todoRemove">
+        <input type="title"
+               placeholder="Write todo..."
+               id="todoTitle"
+               maxlength="25">
+        <input type="submit"
+               value="submit"
+               id="todoSubmit">       
       </form>
     </dialog>
 
